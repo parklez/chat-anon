@@ -1,0 +1,45 @@
+#page {
+  max-width: 35rem;
+  margin: auto;
+}
+
+#main-content {
+  background-color: #3c3c3c;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border: 3px solid rgba(52, 52, 52, 0.8);
+}
+
+#chat {
+  height: 40rem;
+  overflow-y: auto;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background: url("https://img.uhdpaper.com/image-1/c/phone-thumbnail/mieruko-chan-miko-4k-phone-uhdpaper.com-313.1_c-thumbnail.jpg")
+    repeat-y;
+  background-size: cover;
+  color: white;
+}
+
+.no-messages {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
+}
+
+table {
+  min-width: 100%;
+}
+
+tr:nth-of-type(odd) {
+  background-color: rgba(33, 33, 33, 0.8);
+}
+
+tr:nth-of-type(even) {
+  background-color: rgb(60, 60, 60, 0.8);
+}
+
+#input-bar {
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 0 0 1rem 1rem;
+}

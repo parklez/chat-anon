@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="field has-addons">
+  <a class="control" id="avatar" (click)="openAvatarInput()">
+    <figure class="image is-128x128 is-square">
+      <img
+        class="is-rounded"
+        src="{{avatar}}"
+      />
+    </figure>
+  </a>
+  <div id="input-area">
+    <input class="control input is-small" placeholder="Nickname" formControlName="user">
+    <textarea
+    class="textarea is-expanded"
+    style="resize: none"
+    type="text"
+    rows="3"
+    placeholder="Write your message here..."
+    formControlName="text"
+  ></textarea>
+  </div>
+  <p id="send-button">
+    <button class="button is-rounded" type="submit"> Send </button>
+  </p>
+</form>

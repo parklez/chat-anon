@@ -1,0 +1,20 @@
+<div id="page">
+  <div id="main-content">
+    <div id="chat">
+      <table *ngIf="messages">
+        <tr *ngFor="let message of messages">
+          <app-message class="messages"
+            [avatar]="message.avatar"
+            [user]="message.user"
+            [text]="message.text"
+          >
+          </app-message>
+        </tr>
+      </table>
+      <h1 class="no-messages title" *ngIf="messages.length === 0">No messages yet...</h1>
+    </div>
+    <div id="input-bar">
+      <app-input></app-input>
+    </div>
+  </div>
+</div>

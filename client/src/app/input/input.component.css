@@ -1,0 +1,29 @@
+#input-area, #send-button {
+  padding-left: 1rem
+}
+
+#send-button {
+  padding-top: 5.5rem;
+}
+
+#input-area input {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input::placeholder {
+  color: white;
+}
+
+img {
+  object-fit: cover;
+}
+
+textarea {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+}

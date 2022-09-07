@@ -1,0 +1,12 @@
+article {
+    padding: 1rem;
+}
+
+/* This guarantees the object will zoom to fill instead of being streched */
+img {
+    object-fit: cover;
+}
+
+strong {
+    color: rgb(235, 235, 235);
+}
