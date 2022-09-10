@@ -5,29 +5,28 @@
 
 #main-content {
   background-color: #3c3c3c;
-  margin-top: 0.5rem;
   padding: 1rem;
-  border: 3px solid rgba(52, 52, 52, 0.8);
+  border-radius: 1rem;
 }
 
 #chat {
-  height: 40rem;
-  overflow-y: auto;
-  border-radius: 1rem 1rem 0rem 0rem;
-  background: url("https://img.uhdpaper.com/image-1/c/phone-thumbnail/mieruko-chan-miko-4k-phone-uhdpaper.com-313.1_c-thumbnail.jpg")
-    repeat-y;
+  background: url("https://img.uhdpaper.com/image-1/c/phone-thumbnail/mieruko-chan-miko-4k-phone-uhdpaper.com-313.1_c-thumbnail.jpg");
   background-size: cover;
-  color: white;
-}
-
-.no-messages {
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px #000000;
+  overflow-y: auto;
+  height: 40rem;
+  border-radius: 1rem 1rem 0rem 0rem;
 }
 
 table {
+  color: white;
   min-width: 100%;
+}
+
+.no-messages {
+  margin-top: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 tr:nth-of-type(odd) {
