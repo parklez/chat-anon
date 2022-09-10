@@ -11,6 +11,7 @@ import { ProfilePicService } from '../services/profile-pic.service';
 })
 export class InputComponent implements OnInit {
   avatar = 'https://bulma.io/images/placeholders/128x128.png';
+  loadingAvatar = false;
 
   loginForm = new UntypedFormGroup({
     //"avatar": new UntypedFormControl(null, Validators.required),
@@ -21,11 +22,7 @@ export class InputComponent implements OnInit {
   constructor(public chat: ChatService, public profile: ProfilePicService) {}
 
   ngOnInit(): void {
-    this.profile.getRandomPic().subscribe({
-      next: (response) => {
-        this.avatar = response.url
-      }
-    })
+    this.getRandomAvatar();
   }
 
   onSubmit(): void {
@@ -40,5 +37,17 @@ export class InputComponent implements OnInit {
     if (url) {
       this.avatar = url;
     }
+  }
+
+  getRandomAvatar() {
+    this.loadingAvatar = true;
+    this.profile.getRandomPic().subscribe({
+      next: (response) => {
+        this.avatar = response.url
+      },
+      error: () => {
+        this.loadingAvatar = false;
+      }
+    })
   }
 }

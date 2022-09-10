@@ -1,9 +1,18 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="field has-addons">
-  <a class="control" id="avatar" (click)="openAvatarInput()">
-    <figure class="image is-128x128 is-square">
-      <img class="is-rounded" src="{{ avatar }}" />
+  <div class="control" id="avatar">
+    <figure id="avatar-figure" class="image is-128x128 is-square"
+        [style.filter]="loadingAvatar ? 'blur(3px)' : 'none'">
+      <div style="overflow: hidden;">
+        <a (click)="openAvatarInput()">
+          <img class="is-rounded" src="{{ avatar }}" (load)="loadingAvatar=false"/>
+        </a>
+      </div>
     </figure>
-  </a>
+    <mat-spinner diameter="64" id="avatar-spinner" *ngIf="loadingAvatar"></mat-spinner>
+    <a (click)="getRandomAvatar()">
+      <mat-icon id="avatar-reload" fontIcon="refresh"></mat-icon>
+    </a>
+  </div>
   <div id="input-area" class="is-expanded">
     <span>
       <input
