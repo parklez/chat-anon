@@ -29,6 +29,13 @@
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
+#chat > h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 table {
   position: absolute;
   top: 0;
@@ -41,6 +48,7 @@ table {
   text-align: center;
   color: white;
   text-shadow: 2px 2px #000000;
+  white-space: nowrap;
 }
 
 tr:nth-of-type(odd) {
