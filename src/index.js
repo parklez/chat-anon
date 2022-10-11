@@ -29,8 +29,10 @@ const history = [];
 
 io.on('connection', (socket) => {
   socket.on('new-message', (msg) => {
-    history.push(msg);
-    io.emit('new-message', msg);
+    if (msg.user && msg.text) {
+      history.push(msg);
+      io.emit('new-message', msg);
+    }
   });
 
   socket.on('history', () => {

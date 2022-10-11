@@ -31,6 +31,6 @@
     ></textarea>
   </div>
   <p id="send-button">
-    <button class="button is-rounded" type="submit">Send</button>
+    <button class="button is-rounded" type="submit" [disabled]="!loginForm.valid">Send</button>
   </p>
 </form>
